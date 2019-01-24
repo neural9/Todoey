@@ -1,10 +1,4 @@
-//
-//  ViewController.swift
-//  Todoey
-//
-//  Created by Robert Ellis on 17/01/2019.
-//  Copyright © 2019 Robert Ellis. All rights reserved.
-//
+
 
 import UIKit
 import CoreData
@@ -13,6 +7,7 @@ import CoreData
 class TodoListViewController: UITableViewController {
     
     var itemArray = [Item]()
+    
     var selectedCategory : Category?{
         didSet{
             loadItems()
@@ -25,7 +20,6 @@ class TodoListViewController: UITableViewController {
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 
     override func viewDidLoad() {
-        print (dataFilePath)
 
         super.viewDidLoad()
     }
